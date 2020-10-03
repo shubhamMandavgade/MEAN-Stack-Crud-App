@@ -1,0 +1,60 @@
+<div class="container">
+  <h3>Mean stack with DB</h3>
+  <div class="row">
+    <div class="col-4">
+      <form #employeeForm="ngForm" (ngSubmit)="onSubmit(employeeForm)">
+        <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="employeeService.selectedEmployee._id">
+        <div class="form-group">
+          <label for="nm">Name:</label>
+          <input type="text" class="form-control" id="nm" name="name" #name="ngModel"
+            [(ngModel)]="employeeService.selectedEmployee.name" placeholder="Enter full name" required>
+        </div>
+        <div class="form-group">
+          <label for="rol">Role:</label>
+          <input type="text" class="form-control" id="rol" name="position" #position="ngModel"
+            [(ngModel)]="employeeService.selectedEmployee.position" placeholder="Eg : Snr. Developer">
+        </div>
+        <div class="form-group">
+          <label for="loc">Location:</label>
+          <input type="text" class="form-control" id="loc" name="office" #office="ngModel"
+            [(ngModel)]="employeeService.selectedEmployee.office" placeholder="Enter office location">
+        </div>
+        <div class="form-group">
+          <label for="sal">Salary:</label>
+          <input type="text" class="form-control" id="sal" name="salary" #salary="ngModel"
+            [(ngModel)]="employeeService.selectedEmployee.salary" placeholder="Salary per annum">
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="!employeeForm.valid">Submit</button>&nbsp;
+        <button type="button" class="btn btn-info" (click)="resetForm(employeeForm)">Reset</button>
+      </form>
+    </div>
+
+    <div class="col-8">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Office</th>
+            <th>Salary</th>
+          </tr>
+        </thead>
+        <tr *ngFor="let emp of employeeService.employees">
+          <td>{{emp.name}}</td>
+          <td>{{emp.position}}</td>
+          <td>{{emp.office}}</td>
+          <td>{{emp.salary | currency: 'INR'}}</td>
+          <td>
+            <a class="btn" (click)="onEdit(emp)">
+              <i class="fa fa-edit"></i>
+            </a>
+            <a class="btn" (click)="onDelete(emp._id,employeeForm)">
+              <i class="fa fa-remove"></i>
+            </a>
+          </td>
+        </tr>
+      </table>
+      <hr>
+    </div>
+  </div>
+</div>
