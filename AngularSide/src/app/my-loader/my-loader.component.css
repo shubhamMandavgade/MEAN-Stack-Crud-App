@@ -1,6 +1,6 @@
 /* my-loader.component.css */
 .loading-spinner{    
-    background-color: #0000001f;
+    background-color: #0000000c;
     position: absolute;
     width: 100%;
     top: 0px;
@@ -18,4 +18,6 @@
 .loading-message{
     text-align: center;
     align-self: start;
+    font-size: large;
+    color: gray;
 }

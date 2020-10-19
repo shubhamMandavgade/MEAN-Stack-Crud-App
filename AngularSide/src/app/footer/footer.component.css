@@ -1,0 +1,17 @@
+.footer {
+    bottom: 0;
+    color: #707070;
+    height: 80px;
+    left: 0;
+    position: fixed; 
+    font-size: small;
+    width:100%;
+    margin-top: auto;
+    background-color: black;
+    color: white;
+
+ }
+ .content{
+     text-align: center;
+     padding-top: 25px;
+ }

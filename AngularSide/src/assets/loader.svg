@@ -1,0 +1,12 @@
+<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
+  <circle cy="50" cx="63.665" fill="#0055a5" r="20">
+    <animate attributeName="cx" calcMode="linear" values="30;70;30" keyTimes="0;0.5;1" dur="1.9" begin="-0.95s" repeatCount="indefinite"/>
+  </circle>
+  <circle cy="50" cx="36.335" fill="#45aee7" r="20">
+    <animate attributeName="cx" calcMode="linear" values="30;70;30" keyTimes="0;0.5;1" dur="1.9" begin="0s" repeatCount="indefinite"/>
+  </circle>
+  <circle cy="50" cx="63.665" fill="#0055a5" r="20">
+    <animate attributeName="cx" calcMode="linear" values="30;70;30" keyTimes="0;0.5;1" dur="1.9" begin="-0.95s" repeatCount="indefinite"/>
+    <animate attributeName="fill-opacity" values="0;0;1;1" calcMode="discrete" keyTimes="0;0.499;0.5;1" repeatCount="indefinite" dur="1.9s"/>
+  </circle>
+</svg>
